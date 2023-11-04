@@ -1,4 +1,5 @@
 import shutil
+import subprocess
 from tkinter import filedialog
 
 
@@ -22,3 +23,11 @@ print(f"Removed directory: {folder1}")
 
 shutil.copytree(folder2, folder1)
 print(f"Copied directory from {folder2} to {folder1}")
+
+
+def MyExecute(cmd):
+    subprocess.Popen(cmd, shell=True).wait()
+
+
+cmd = r" code   C:\Users\vvn20206205\Desktop\nghia\workspace\vvn20206205.code-workspace"
+MyExecute(cmd)
